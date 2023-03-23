@@ -15,3 +15,24 @@ bilogMenu.addEventListener("click", () => {
     bilogMenu.classList.toggle("swap");
     bilogMenu.classList.toggle("closing");
 });
+
+// const dropp = document.querySelectorAll(".fa-chevron-down");
+// const navDrop = document.querySelectorAll(".nav__drop");
+
+// dropp.forEach((dropps) => {
+//     dropps.addEventListener("click", () => {
+//         navDrop.classList.toggle("show");
+//     });
+// })
+
+const dropp = document.querySelectorAll(".fa-chevron-down");
+
+dropp.forEach((dropps) => {
+    dropps.addEventListener('click',()=>{
+
+        const el = dropps.parentElement.nextElementSibling;
+        el.classList.toggle("show");
+        dropps.classList.toggle("show");
+        dropps.parentElement.classList.toggle("active");
+    })
+})
