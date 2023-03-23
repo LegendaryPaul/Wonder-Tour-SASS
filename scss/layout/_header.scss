@@ -105,30 +105,38 @@
                         gap: 2rem;
                     }
                     li{
-                        padding: 1rem;
                         margin-bottom: .5rem;
                         transition: .4s ease-in-out;
                         border-top: 5px solid transparent;
-                        
                             @include mediaQuery($desktop){
                                 padding: unset;
                                 padding: 1.6rem 0;
                                 margin-bottom: unset;
                                 
                             }
-                            &.active{
-                                background-color: $clr-primary;
-                                a{
-                                    color: #fff;
+                            a{
+                                display: inline-block;
+                                width: 100%;
+                                padding: 1rem;
+                                &:hover{
+                                    background-color: $clr-primary;
+                                    a{
+                                        color: #fff;
+                                    }
+                                    i{
+                                        color: #fff;
+                                    }
                                 }
-                            }
-                            &:hover{
-                                background-color: $clr-primary;
-                                a{
-                                    color: #fff;
-                                }
-                                i{
-                                    color: #fff;
+                                @include mediaQuery($desktop){
+                                    &:hover{
+                                        background-color: unset;
+                                        a{
+                                            color: unset;
+                                        }
+                                        i{
+                                            color: unset;
+                                        }
+                                    }
                                 }
                             }
                         @include mediaQuery($desktop){
@@ -166,11 +174,7 @@
                             span{
                                 width: 100%;
                                 padding: 1rem;
-                                
-                                
-                                &:hover a{
-                                    color: #fff;
-                                }
+                                color: #000;
                             }
                             @include mediaQuery($desktop){
                                 max-width: fit-content;
@@ -196,12 +200,7 @@
                     .nav__drop{
                         transition: .4s ease-in-out;
                         margin: 1rem;
-                        // @include mediaQuery($desktop){
-                        //         position: absolute;
-                        //         // width: 40%;
-                        //         top: 7.4rem;
-                        //         display: block;
-                        // }
+                        
                         &.about2 {
                             display: block;
                             @include mediaQuery($desktop){
@@ -393,9 +392,9 @@
                                 display: flex;
                             }
                             li{
-                                padding: .7rem;
+                                // padding: .7rem;
                                 &:hover{
-                                    background-color: $clr-primary;
+                                    // background-color: $clr-primary;
                                     a{
                                         color: #fff;
                                         @include mediaQuery($desktop){
@@ -429,7 +428,6 @@
 
             span{
                 width: .7rem;
-                height: .7rem;
                 background-color: black;
                 margin-bottom: .3rem;
                 border-radius: 50%;

@@ -531,7 +531,6 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   }
 }
 .header__wrapper .header__nav__ul ul li {
-  padding: 1rem;
   margin-bottom: 0.5rem;
   transition: 0.4s ease-in-out;
   border-top: 5px solid transparent;
@@ -543,20 +542,30 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
     margin-bottom: unset;
   }
 }
-.header__wrapper .header__nav__ul ul li.active {
+.header__wrapper .header__nav__ul ul li a {
+  display: inline-block;
+  width: 100%;
+  padding: 1rem;
+}
+.header__wrapper .header__nav__ul ul li a:hover {
   background-color: #01b3a7;
 }
-.header__wrapper .header__nav__ul ul li.active a {
+.header__wrapper .header__nav__ul ul li a:hover a {
   color: #fff;
 }
-.header__wrapper .header__nav__ul ul li:hover {
-  background-color: #01b3a7;
-}
-.header__wrapper .header__nav__ul ul li:hover a {
+.header__wrapper .header__nav__ul ul li a:hover i {
   color: #fff;
 }
-.header__wrapper .header__nav__ul ul li:hover i {
-  color: #fff;
+@media screen and (min-width: 97rem) {
+  .header__wrapper .header__nav__ul ul li a:hover {
+    background-color: unset;
+  }
+  .header__wrapper .header__nav__ul ul li a:hover a {
+    color: unset;
+  }
+  .header__wrapper .header__nav__ul ul li a:hover i {
+    color: unset;
+  }
 }
 @media screen and (min-width: 97rem) {
   .header__wrapper .header__nav__ul ul li:nth-child(2):hover .nav__drop.about2 {
@@ -593,9 +602,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 .header__wrapper .header__nav__ul ul li a span {
   width: 100%;
   padding: 1rem;
-}
-.header__wrapper .header__nav__ul ul li a span:hover a {
-  color: #fff;
+  color: #000;
 }
 @media screen and (min-width: 97rem) {
   .header__wrapper .header__nav__ul ul li a {
@@ -814,12 +821,6 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
     display: flex;
   }
 }
-.header__wrapper .header__nav__ul ul .nav__drop ul li {
-  padding: 0.7rem;
-}
-.header__wrapper .header__nav__ul ul .nav__drop ul li:hover {
-  background-color: #01b3a7;
-}
 .header__wrapper .header__nav__ul ul .nav__drop ul li:hover a {
   color: #fff;
 }
@@ -847,7 +848,6 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 }
 .header__wrapper .toggle__side__menu span {
   width: 0.7rem;
-  height: 0.7rem;
   background-color: black;
   margin-bottom: 0.3rem;
   border-radius: 50%;
