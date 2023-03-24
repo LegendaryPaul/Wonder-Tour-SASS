@@ -420,6 +420,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 .header {
   width: 100%;
   position: fixed;
+  background-color: #fff;
   z-index: 999;
   box-shadow: 0 2px 2px rgb(194, 194, 194);
 }
@@ -472,10 +473,10 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
     top: 9.2rem;
     display: flex;
     align-items: center;
-    padding: 0 36rem;
+    padding: 0 32rem;
     flex-direction: row-reverse;
     height: auto;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #162E44;
     width: 100%;
   }
@@ -501,7 +502,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 }
 @media screen and (min-width: 97rem) {
   .header__wrapper .header__nav__head ul {
-    gap: 2rem;
+    gap: 1rem;
   }
 }
 .header__wrapper .header__nav__head ul li {
@@ -538,14 +539,19 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 @media screen and (min-width: 97rem) {
   .header__wrapper .header__nav__ul ul li {
     padding: unset;
-    padding: 1.6rem 0;
     margin-bottom: unset;
   }
 }
 .header__wrapper .header__nav__ul ul li a {
   display: inline-block;
   width: 100%;
-  padding: 1rem;
+}
+.header__wrapper .header__nav__ul ul li a.active {
+  background-color: #01b3a7;
+  color: #fff;
+}
+.header__wrapper .header__nav__ul ul li a.active span {
+  color: #fff;
 }
 .header__wrapper .header__nav__ul ul li a:hover {
   background-color: #01b3a7;
@@ -554,6 +560,9 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   color: #fff;
 }
 .header__wrapper .header__nav__ul ul li a:hover i {
+  color: #fff;
+}
+.header__wrapper .header__nav__ul ul li a:hover span {
   color: #fff;
 }
 @media screen and (min-width: 97rem) {
@@ -604,6 +613,10 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   padding: 1rem;
   color: #000;
 }
+.header__wrapper .header__nav__ul ul li a span.active {
+  background-color: #01b3a7;
+  color: #fff;
+}
 @media screen and (min-width: 97rem) {
   .header__wrapper .header__nav__ul ul li a {
     max-width: -moz-fit-content;
@@ -630,7 +643,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 }
 .header__wrapper .header__nav__ul ul .nav__drop {
   transition: 0.4s ease-in-out;
-  margin: 1rem;
+  background-color: #fff;
 }
 .header__wrapper .header__nav__ul ul .nav__drop.about2 {
   display: block;
@@ -638,8 +651,8 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 @media screen and (min-width: 97rem) {
   .header__wrapper .header__nav__ul ul .nav__drop.about2 {
     position: absolute;
-    top: 7.4rem;
-    left: 23.1%;
+    top: 7.3rem;
+    left: 26%;
     display: none;
     padding: 2rem;
   }
@@ -654,11 +667,12 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   }
   .header__wrapper .header__nav__ul ul .nav__drop.about2 ul li:hover a {
     padding-left: 2rem;
-    transition: 0.3s ease-in-out;
     color: #000;
   }
   .header__wrapper .header__nav__ul ul .nav__drop.about2 ul li a {
     color: #000;
+    padding-left: 0;
+    transition: 0.3s ease-in-out;
   }
 }
 .header__wrapper .header__nav__ul ul .nav__drop.tour {
@@ -668,8 +682,8 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   .header__wrapper .header__nav__ul ul .nav__drop.tour {
     position: absolute;
     padding: 2rem;
-    top: 7.4rem;
-    left: 28%;
+    top: 7.3rem;
+    left: 32%;
     display: none;
   }
   .header__wrapper .header__nav__ul ul .nav__drop.tour ul li {
@@ -688,6 +702,8 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   }
   .header__wrapper .header__nav__ul ul .nav__drop.tour ul li a {
     color: #000;
+    padding-left: 0;
+    transition: 0.3s ease-in-out;
   }
 }
 .header__wrapper .header__nav__ul ul .nav__drop.gallery {
@@ -697,8 +713,8 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   .header__wrapper .header__nav__ul ul .nav__drop.gallery {
     position: absolute;
     padding: 2rem;
-    top: 7.4rem;
-    left: 34.6%;
+    top: 7.3rem;
+    left: 39.7%;
     display: none;
   }
   .header__wrapper .header__nav__ul ul .nav__drop.gallery ul {
@@ -722,6 +738,8 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   }
   .header__wrapper .header__nav__ul ul .nav__drop.gallery ul li a {
     color: #000;
+    padding-left: 0;
+    transition: 0.3s ease-in-out;
   }
 }
 .header__wrapper .header__nav__ul ul .nav__drop.blog {
@@ -731,8 +749,8 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   .header__wrapper .header__nav__ul ul .nav__drop.blog {
     position: absolute;
     padding: 2rem;
-    top: 7.4rem;
-    left: 39.8%;
+    top: 7.3rem;
+    left: 46%;
     display: none;
   }
   .header__wrapper .header__nav__ul ul .nav__drop.blog ul {
@@ -756,6 +774,8 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   }
   .header__wrapper .header__nav__ul ul .nav__drop.blog ul li a {
     color: #000;
+    padding-left: 0;
+    transition: 0.3s ease-in-out;
   }
 }
 .header__wrapper .header__nav__ul ul .nav__drop.pages {
@@ -765,12 +785,13 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   .header__wrapper .header__nav__ul ul .nav__drop.pages {
     position: absolute;
     padding: 2rem;
-    top: 7.4rem;
+    top: 7.3rem;
     left: 18.5%;
     display: none;
   }
   .header__wrapper .header__nav__ul ul .nav__drop.pages ul {
     display: flex;
+    align-items: center;
     gap: unset;
   }
   .header__wrapper .header__nav__ul ul .nav__drop.pages ul li {
@@ -789,6 +810,8 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   }
   .header__wrapper .header__nav__ul ul .nav__drop.pages ul li a {
     color: #000;
+    padding-left: 0;
+    transition: 0.3s ease-in-out;
   }
 }
 @media screen and (min-width: 97rem) {
@@ -829,6 +852,9 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
     color: #000;
   }
 }
+.header__wrapper .header__nav__ul ul .nav__drop ul li a {
+  padding: 1rem 4rem;
+}
 .header__wrapper .header__nav__ul ul .nav__drop.show {
   height: auto;
 }
@@ -841,6 +867,9 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 .header__wrapper .header__nav.show {
   left: 0;
 }
+.header__wrapper .toggle__side__menu {
+  display: block;
+}
 @media screen and (min-width: 97rem) {
   .header__wrapper .toggle__side__menu {
     display: none;
@@ -848,6 +877,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 }
 .header__wrapper .toggle__side__menu span {
   width: 0.7rem;
+  height: 0.6rem;
   background-color: black;
   margin-bottom: 0.3rem;
   border-radius: 50%;
@@ -869,6 +899,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   opacity: 0;
   padding: 2.5rem 2rem;
   transition: 0.5s ease-in-out;
+  background-color: #fff;
 }
 @media screen and (min-width: 97rem) {
   .header__wrapper .header__sched {
@@ -956,4 +987,199 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   visibility: visible;
   opacity: 1;
   top: 6.3rem;
+}
+
+.banner {
+  height: 85vh;
+}
+.banner__wrapper .banner__content {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+@media screen and (min-width: 97rem) {
+  .banner__wrapper .banner__content {
+    height: 85vh;
+  }
+}
+.banner__wrapper .banner__content .banner__pic {
+  background-image: url("../img/banner-photo.jpg");
+  background-position-x: -15rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 97rem) {
+  .banner__wrapper .banner__content .banner__pic {
+    background-position-x: unset;
+  }
+}
+.banner__wrapper .banner__content .banner__pic .banner__all {
+  display: flex;
+  flex-direction: column;
+}
+.banner__wrapper .banner__content .banner__pic .banner__all .banner__text h5 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+  font-weight: 600;
+}
+@media screen and (min-width: 97rem) {
+  .banner__wrapper .banner__content .banner__pic .banner__all .banner__text h5 {
+    font-size: 2rem;
+  }
+}
+.banner__wrapper .banner__content .banner__pic .banner__all .banner__text h4 {
+  font-size: 5rem;
+  color: #fff;
+  text-transform: capitalize;
+  margin: 1rem 0;
+}
+.banner__wrapper .banner__content .banner__pic .banner__all .banner__text h4 span {
+  color: #fff;
+  font-weight: 700;
+}
+@media screen and (min-width: 97rem) {
+  .banner__wrapper .banner__content .banner__pic .banner__all .banner__text h4 {
+    font-size: 7rem;
+    letter-spacing: px;
+  }
+}
+.banner__wrapper .banner__content .banner__pic .banner__all .banner__text:nth-child(2) {
+  font-size: 3.6rem;
+}
+.banner__wrapper .banner__content .banner__pic .banner__all .banner__btn {
+  margin-top: 2rem;
+}
+.banner__wrapper .banner__content .banner__pic .banner__all .banner__btn a {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+.banner__wrapper .banner__content .banner__pic .banner__all .banner__btn a::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+.banner__wrapper .banner__content .banner__pic .banner__all .banner__btn a:hover::after {
+  background: #01B3A7;
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+.banner button {
+  display: none;
+}
+
+.tours {
+  padding: 5rem 0;
+  background-color: #e6e6e6;
+}
+.tours__wrapper {
+  padding: 5rem;
+  margin-top: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 97rem) {
+  .tours__wrapper {
+    flex-direction: row;
+    margin-top: -15rem;
+  }
+}
+.tours__wrapper .tours__item {
+  position: relative;
+  overflow: hidden;
+}
+.tours__wrapper .tours__item img {
+  transition: 0.3s ease-in-out;
+}
+@media screen and (min-width: 97rem) {
+  .tours__wrapper .tours__item img {
+    width: 40rem;
+  }
+}
+.tours__wrapper .tours__item:hover img {
+  transform: scale(1.1);
+}
+.tours__wrapper .tours__item:last-child img {
+  height: 455px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tours__wrapper .tours__text {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(transparent, black);
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.tours__wrapper .tours__text h4 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+.tours__action a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+}
+.tours__action h5 {
+  font-weight: 500;
+}
+.tours__action span {
+  width: 2rem;
+  height: 0.2rem;
+  background-color: black;
+  display: block;
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+.tours__action span::after {
+  right: -0.3rem;
+  top: -0.2rem;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 3px 0 3px 6px;
+  border-color: transparent transparent transparent #151515;
+}
+.tours__action:hover span {
+  width: 5rem;
+}
+
+.btn {
+  padding: 1.5rem 4rem;
+}
+.btn__outline {
+  border: 4px solid #fff;
+  transition: 0.4s ease-in-out;
+}
+.btn__outline:hover {
+  border: 4px solid #01b3a7;
 }/*# sourceMappingURL=main.css.map */

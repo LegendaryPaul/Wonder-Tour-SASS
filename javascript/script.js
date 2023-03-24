@@ -16,14 +16,6 @@ bilogMenu.addEventListener("click", () => {
     bilogMenu.classList.toggle("closing");
 });
 
-// const dropp = document.querySelectorAll(".fa-chevron-down");
-// const navDrop = document.querySelectorAll(".nav__drop");
-
-// dropp.forEach((dropps) => {
-//     dropps.addEventListener("click", () => {
-//         navDrop.classList.toggle("show");
-//     });
-// })
 
 const dropp = document.querySelectorAll(".fa-chevron-down");
 
@@ -34,5 +26,17 @@ dropp.forEach((dropps) => {
         el.classList.toggle("show");
         dropps.classList.toggle("show");
         dropps.parentElement.classList.toggle("active");
+        dropps.classList.toggle("active");
     })
 })
+
+var slider = tns({
+    container: '.banner__wrapper',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true,
+    axis: "vertical",
+    controls: false,
+    nav: false,
+    autoplayPosition: false,
+});

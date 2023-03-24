@@ -1,0 +1,12 @@
+.btn{
+    padding: 1.5rem 4rem;
+
+    &__outline{
+        border: 4px solid #fff;
+        transition: .4s ease-in-out;
+
+        &:hover{
+            border: 4px solid $clr-primary;
+        }
+    }
+}
